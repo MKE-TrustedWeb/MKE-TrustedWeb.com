@@ -1,0 +1,83 @@
+.section-pricing-head {
+  background-color: #f0f5fa;
+}
+
+.section-pricing-info {
+  background-color: #fbfcfe;
+}
+.pricing-grid-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  margin: 0 auto;
+  padding: 3.2rem 4.6rem;
+
+  border-radius: 11px;
+}
+
+.pricing-info-box {
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  border-radius: 16px;
+  border: #013f78 solid 2px;
+  background-color: #ebf2f8;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+  padding: 1.6rem;
+}
+
+.information-title-box-pricing {
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.information-title {
+  justify-self: left;
+}
+
+.pricing-title-icons {
+  font-size: 3rem;
+  margin-left: 50rem;
+  color: #013f78;
+  justify-self: end;
+}
+
+.btw-abbo-grid {
+  display: grid;
+}
+.btw-abbo {
+  justify-self: center;
+}
+.hidden {
+  display: none;
+}
+
+.btn-pricing {
+  display: flex;
+  margin: 0 auto;
+}
+
+/**************************/
+/* BELOW 640px (tablet) */
+/**************************/
+
+@media (max-width: 40em) {
+  .pricing-title-icons {
+    margin-left: 30rem;
+  }
+}
+
+@media (max-width: 28em) {
+  .pricing-title-icons {
+    margin-left: 15rem;
+  }
+}

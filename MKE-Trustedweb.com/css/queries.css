@@ -1,0 +1,696 @@
+/************************************ */
+/* BELOW 1344PX (SMALLER DESKTOPS)*/
+/* 1344/16=84 */
+/* *********************************** */
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+  .section-hero,
+  .section-pricing-head,
+  .section-more-info-head {
+    background-color: #f0f5fa;
+    padding: 4.8rem 9.6rem;
+  }
+}
+
+@media (max-width: 78em) {
+  .hero-btn {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2.3rem;
+  }
+
+  .grid--footer {
+    column-gap: 3.2rem;
+  }
+}
+
+/************************************ */
+/* BELOW 1200PX (landscape tablet)*/
+/* 1344/16=75 */
+/* *********************************** */
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .pricing {
+    gap: 2.4rem;
+    row-gap: 8.4rem;
+  }
+}
+
+@media (max-width: 68em) {
+  .pricing-card-top {
+    margin-bottom: 2.4rem;
+  }
+}
+
+/************************************ */
+/* BELOW 950PX (landscape tablet)*/
+/* 960/16=60 */
+/* *********************************** */
+
+@media (max-width: 60em) {
+  html {
+    font-size: 50%;
+  }
+
+  .section-hero,
+  .section-pricing-head,
+  .section-information,
+  .section-cta,
+  .section-more-info-head {
+    padding: 2.4rem 4.8rem;
+  }
+
+  .section-pricing,
+  .section-information,
+  .section-cta,
+  .section-pricing-info {
+    margin-top: 2.4rem;
+  }
+
+  .section-pricing,
+  .section-pricing-info {
+    padding: 3.2rem 9.6rem;
+  }
+
+  .pricing-card {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.6s ease;
+  }
+
+  .btw-abbo-grid {
+    margin-bottom: 2.4rem;
+  }
+
+  .pricing-card.active {
+    z-index: 4;
+  }
+
+  .pricing-card.next,
+  .pricing-card.prev {
+    position: absolute;
+    top: 0;
+
+    width: 20rem;
+    max-height: 10rem;
+    transform: scale(0.6);
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+  .pricing {
+    row-gap: 4.6rem;
+  }
+
+  .pricing-card.prev {
+    right: calc(33.333% + 30rem);
+  }
+  .pricing-card.next {
+    left: calc(33.333% + 30rem);
+  }
+
+  .slider-indenticator {
+    cursor: pointer;
+  }
+
+  .more-info-pricing {
+    grid-column: 1 / 1;
+    margin-top: 1.2rem;
+  }
+
+  /* HERO */
+  .hero {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text-box {
+    grid-column: 1 / -1;
+  }
+  .hero-img-box {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    margin-top: 2.4rem;
+  }
+
+  .hero-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* PRICING */
+
+  .pricing {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+
+    margin: 0 auto;
+    max-width: 40rem;
+  }
+
+  .pricing-card-top {
+    margin-bottom: 0;
+    height: 29rem;
+  }
+  .pricing-head-text {
+    padding: 1.2rem 0 0 0;
+  }
+  .slider-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-row: 2 / 3;
+    align-self: center;
+  }
+  .slider-indenticator {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background-color: #ccdeee; /* Standaard kleur */
+    display: flex;
+    text-align: center;
+    margin: auto 0;
+  }
+
+  .active-slider-indicator {
+    background-color: #013f78; /* Kleur voor actieve kaart */
+  }
+  .pricing-card {
+    display: none;
+  }
+
+  /* MORE INFO */
+  /* ////////////////////// */
+
+  .more-info {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.6rem;
+  }
+
+  .read-more {
+    text-align: center;
+    margin-top: 2.4rem;
+    padding: 0;
+  }
+
+  .icon-box {
+    margin-left: 0;
+  }
+
+  /* mobile nav */
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    /* gap: 4.8rem; voor de talen */
+  }
+
+  /* Verwijder de rechtermarge voor de laatste twee <li> elementen */
+  .main-nav-list li:nth-last-child(-n + 2) {
+    margin-top: 2.4rem;
+  }
+
+  /* Voeg marges toe aan alle <a> elementen binnen <li> met class "main-nav-link" */
+  .main-nav-link {
+    margin-top: 4.8rem;
+  }
+
+  /* Geef <a> elementen binnen <li> met class "lang-link" een gap van 1.2rem */
+  .lang-link {
+    margin-top: 1.2rem;
+    margin-left: auto;
+    margin-right: 3.2rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  .cta-text-box {
+    margin-bottom: 0;
+  }
+
+  .cta-form-box {
+    margin-top: 2.4rem;
+  }
+
+  /* footer */
+  .grid--footer {
+    gap: 4.8rem;
+  }
+
+  .footer-img {
+    max-width: 80%;
+  }
+
+  /* more-info-pricing */
+}
+/**************************/
+/* BELOW 640px (tablet) */
+/**************************/
+
+@media (max-width: 40em) {
+  .section-hero,
+  .section-information,
+  .section-pricing,
+  .grid--footer,
+  .cta-text-box,
+  .section-pricing-head,
+  .section-pricing-info,
+  .section-more-info-head {
+    padding: 2.4rem 0.6rem;
+  }
+
+  .section-hero {
+    min-height: 0;
+    padding-bottom: 6.4rem;
+  }
+
+  .header {
+    padding: 0 0.6rem;
+  }
+
+  .hero-img-desk {
+    display: none;
+  }
+
+  .hero-img-tel {
+    display: block;
+  }
+
+  .hero-btn {
+    margin-top: 1.2rem;
+  }
+  .section-cta {
+    padding: 2.4rem 0.6rem 15rem 0.6rem;
+  }
+
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+
+  .heading-secondary,
+  .heading-secondary-cta,
+  .heading-cta {
+    font-size: 3rem;
+  }
+
+  .subheading {
+    font-size: 1.4rem;
+  }
+
+  .pricing {
+    grid-template-columns: auto;
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+
+  .pricing-head-product {
+    font-size: 1.8rem;
+  }
+
+  .pricing-head-price {
+    font-size: 2rem;
+  }
+  .pricing-card-top {
+    margin-bottom: 0;
+    height: 29rem;
+  }
+  .pricing-head-text {
+    padding: 1.2rem 0 0 0;
+  }
+
+  .pricing-hosting-text {
+    margin-bottom: 0.8rem;
+    padding-top: 0.6rem;
+  }
+  .pricing-hosting-product {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+
+  .pricing-hosting-price {
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+  }
+
+  .pricing-card-top-1 {
+    margin-bottom: 0;
+    max-height: 25rem;
+  }
+
+  .pricing-card {
+    margin-top: 1.6rem;
+  }
+
+  .pricing {
+    width: 25rem;
+  }
+
+  .pricing-card.prev {
+    right: calc(33.333% + 15rem);
+  }
+  .pricing-card.next {
+    left: calc(33.333% + 15rem);
+  }
+  .slider-indenticator {
+    width: 2rem;
+    height: 2rem;
+  }
+  .grid--footer {
+    padding: 3.2rem 0.6rem;
+  }
+  .copyright {
+    font-size: 1rem;
+  }
+  .pricing-head-list-item {
+    font-size: 1.4rem;
+  }
+
+  .pricing-hosting-list-item {
+    font-size: 1.4rem;
+  }
+}
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .heading-primary {
+    font-size: 3rem;
+  }
+
+  .heading-secondary,
+  .heading-secondary-cta,
+  .heading-cta {
+    font-size: 2.4rem;
+  }
+
+  .heading-secondary,
+  .heading-secondary-cta {
+    margin: 1.2rem 0 1.2rem 0;
+  }
+
+  .subheading {
+    font-size: 1.2rem;
+  }
+
+  .hero-description {
+    line-height: 1.6;
+    font-size: 1.4rem;
+  }
+
+  .hero-btn {
+    row-gap: 1.2rem;
+  }
+
+  .pricing {
+    row-gap: 3.6rem;
+  }
+
+  .pricing-card-top {
+    height: 25.5rem;
+  }
+  .pricing-card-top-1 {
+    height: 23rem;
+  }
+  .pricing-head-list-item {
+    font-size: 1.2rem;
+  }
+
+  .pricing-hosting-list-item {
+    font-size: 1.2rem;
+  }
+
+  .pricing-head-list-item,
+  .pricing-hosting-list-item {
+    margin-bottom: 0.6rem;
+  }
+
+  .slider-indenticator {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .active-slider-indicator {
+    background-color: #013f78; /* Kleur voor actieve kaart */
+  }
+
+  .more-info {
+    padding: 0 9.6rem;
+  }
+
+  .more-info-card {
+    padding: 1.2rem 1.2rem;
+    background-color: #fcfdfe;
+    border-radius: 40px 5px 40px 5px;
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.075);
+  }
+  .information-title {
+    font-size: 1.8rem;
+  }
+
+  .cta-form-box {
+    padding: 2.4rem;
+    max-width: 500rem;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+
+  .more-info {
+    grid-template-columns: 1fr;
+    padding: 0rem 9.6rem;
+  }
+
+  .grid--footer {
+    gap: 2.4rem;
+  }
+  .footer-img {
+    max-width: 100%;
+  }
+  .footer-icon,
+  .footer-text,
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.2rem;
+  }
+
+  .footer-heading {
+    font-size: 1.6rem;
+  }
+
+  .footer-socials-title {
+    font-size: 1.2rem;
+  }
+
+  .footer-social-icon {
+    font-size: 2rem;
+  }
+  .footer-list-item {
+    column-gap: 0.6rem;
+  }
+}
+
+/**************************/
+/* BELOW 496PX (Phones) */
+/**************************/
+
+@media (max-width: 31em) {
+  .hero-btn {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .pricing-card.prev {
+    right: calc(33.333% + 12.5rem);
+  }
+  .pricing-card.next {
+    left: calc(33.333% + 12.5rem);
+  }
+
+  .btw {
+    font-size: 0.8rem;
+  }
+
+  .info-list {
+    gap: 1.2rem;
+  }
+
+  .grid--footer {
+    gap: 1.2rem;
+  }
+  .footer-info {
+    font-size: 0.8rem;
+  }
+
+  .more-info {
+    padding: 0.4rem 2.4rem;
+    gap: 2.4rem;
+  }
+
+  .more-info-card {
+    padding: 1.2rem 1.2rem;
+  }
+
+  .information-text,
+  .information-bold {
+    font-size: 1.2rem;
+  }
+
+  .information-title {
+    font-size: 1.6rem;
+  }
+
+  .information-title-box {
+    margin: 0.8rem 0;
+  }
+  .icon-box {
+    margin-top: 1.2rem;
+  }
+
+  .information-text-closer-box {
+    margin-top: 0.6rem;
+  }
+
+  .information-text-closer {
+    font-size: 1.4rem;
+  }
+}
+/**************************/
+/* checkbox iphone  */
+/**************************/
+
+/* CSS voor het verkleinen van checkboxen op iPhones */
+@media only screen and (max-width: 480px) {
+  /* Voeg hier de gewenste stijlregels toe om de grootte van de checkboxen aan te passen */
+  .input-contact {
+    transform: scale(0.8); /* Verklein de grootte van de checkboxen met 20% */
+  }
+}
+/**************************/
+/* BELOW 445PX (Phones) */
+/**************************/
+@media (max-width: 28em) {
+  .heading-primary {
+    font-size: 2.4rem;
+  }
+
+  .heading-secondary,
+  .heading-secondary-cta,
+  .heading-cta {
+    font-size: 2rem;
+  }
+  .pricing-hosting-background {
+    margin-top: 4.8rem;
+  }
+
+  .pricing-head-product {
+    font-size: 1.8rem;
+  }
+
+  .pricing-head-price {
+    font-size: 2rem;
+  }
+  .pricing-card-top {
+    margin-bottom: 0;
+    height: 21rem;
+  }
+
+  .pricing-card-top-1 {
+    margin-bottom: 0;
+    height: 18rem;
+  }
+  .pricing-head-text {
+    padding: 1.2rem 0 0 0;
+  }
+
+  .pricing-head-list-item,
+  .pricing-hosting-list-item {
+    margin-bottom: 0.6rem;
+  }
+
+  .slider-indenticator {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .slider-btn {
+    font-size: 0.8rem;
+
+    padding: 1.2rem;
+  }
+  .more-info {
+    padding: 0.4rem 1.6rem;
+    gap: 1.2rem;
+  }
+
+  .cta-form-box {
+    margin-top: 1.2rem;
+  }
+
+  .grid--footer {
+    gap: 1.2rem;
+  }
+}
